@@ -74,14 +74,6 @@ class _MapsPageState extends State<MapsPage> {
       builder: (BuildContext context, provider, Widget? child) {
         Set<Marker> markers = {};
         Set<Polyline> polylines = {};
-        // polylines = {
-        //   Polyline(
-        //     polylineId: const PolylineId("route"),
-        //     color: Colors.blue,
-        //     width: 5,
-        //     points: provider.points,
-        //   ),
-        // };
 
         if (provider.status == LocationStatus.restaurantsLoaded &&
             markers.isEmpty) {
