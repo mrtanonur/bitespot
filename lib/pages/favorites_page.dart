@@ -23,11 +23,11 @@ class _FavoritesPageState extends State<FavoritesPage> {
     _favoriteProvider!.addListener(favoriteListener);
   }
 
-  // @override
-  // void dispose() {
-  //   _favoriteProvider!.removeListener(favoriteListener);
-  //   super.dispose();
-  // }
+  @override
+  void dispose() {
+    _favoriteProvider!.removeListener(favoriteListener);
+    super.dispose();
+  }
 
   void favoriteListener() {
     FavoriteStatus status = _favoriteProvider!.status;
