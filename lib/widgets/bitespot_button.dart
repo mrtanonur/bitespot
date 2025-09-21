@@ -26,7 +26,9 @@ class BitespotButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(SizeConstants.s12),
         ),
         child: isLoading
-            ? const CircularProgressIndicator()
+            ? CircularProgressIndicator(
+                color: Theme.of(context).colorScheme.surfaceBright,
+              )
             : Text(
                 text,
                 style: TextStyle(
