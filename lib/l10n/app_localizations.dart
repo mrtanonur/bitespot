@@ -128,7 +128,7 @@ abstract class AppLocalizations {
   /// No description provided for @system.
   ///
   /// In en, this message translates to:
-  /// **'system'**
+  /// **'System'**
   String get system;
 
   /// No description provided for @light.
@@ -292,6 +292,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Navigate'**
   String get navigate;
+
+  /// No description provided for @weHaveSentYouAnEmailForVerificationPleaseCheckYourEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'We have sent you an e-mail for verification. Please Check your email.'**
+  String get weHaveSentYouAnEmailForVerificationPleaseCheckYourEmail;
+
+  /// No description provided for @haventYouReceievedAnEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Haven\'t you receieved an email?'**
+  String get haventYouReceievedAnEmail;
+
+  /// No description provided for @passwordResetLinkHasBeenSentToYourEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Password reset link has been sent to your e-mail'**
+  String get passwordResetLinkHasBeenSentToYourEmail;
+
+  /// No description provided for @somethingWentWrong.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong.'**
+  String get somethingWentWrong;
+
+  /// No description provided for @enterYourEmailToSendYouAPasswordResetEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your e-mail to send you a password reset email'**
+  String get enterYourEmailToSendYouAPasswordResetEmail;
+
+  /// No description provided for @email2.
+  ///
+  /// In en, this message translates to:
+  /// **'Email:'**
+  String get email2;
+
+  /// No description provided for @pleaseVerifyYourEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Please verify your email'**
+  String get pleaseVerifyYourEmail;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -31,5 +31,12 @@
     "open": "Açık",
     "close": "Kapalı",
     "workingHours": "Çalışma Saatleri",
-    "navigate": "Yol tarifi al"
+    "navigate": "Yol tarifi al",
+    "weHaveSentYouAnEmailForVerificationPleaseCheckYourEmail": "Doğrulama için size bir e-posta gönderdik. Lütfen e-postanızı kontrol edin.",
+    "haventYouReceievedAnEmail": "E-posta almadınız mı?",
+    "passwordResetLinkHasBeenSentToYourEmail": "Şifre sıfırlama bağlantısı e-postanıza gönderildi.",
+    "somethingWentWrong": "Bir şeyler yanlış gitti.",
+    "enterYourEmailToSendYouAPasswordResetEmail": "Şifre sıfırlama e-postası göndermek için e-posta adresinizi girin.",
+    "email2": "Email:",
+    "pleaseVerifyYourEmail": "Lütfen e-postanızı doğrulayın"
 }

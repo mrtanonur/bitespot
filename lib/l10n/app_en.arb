@@ -4,7 +4,7 @@
     "settings": "Settings",
     "theme": "Theme",
     "language": "Language",
-    "system": "system",
+    "system": "System",
     "light": "Light",
     "dark": "Dark",
     "error": "Error",
@@ -31,5 +31,12 @@
     "open": "Open",
     "close": "Close",
     "workingHours": "Working Hours",
-    "navigate": "Navigate"
+    "navigate": "Navigate",
+    "weHaveSentYouAnEmailForVerificationPleaseCheckYourEmail": "We have sent you an e-mail for verification. Please Check your email.",
+    "haventYouReceievedAnEmail": "Haven't you receieved an email?",
+    "passwordResetLinkHasBeenSentToYourEmail": "Password reset link has been sent to your e-mail",
+    "somethingWentWrong": "Something went wrong.",
+    "enterYourEmailToSendYouAPasswordResetEmail": "Enter your e-mail to send you a password reset email",
+    "email2": "Email:",
+    "pleaseVerifyYourEmail": "Please verify your email"
 }

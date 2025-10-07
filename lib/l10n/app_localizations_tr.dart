@@ -106,4 +106,25 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get navigate => 'Yol tarifi al';
+
+  @override
+  String get weHaveSentYouAnEmailForVerificationPleaseCheckYourEmail => 'Doğrulama için size bir e-posta gönderdik. Lütfen e-postanızı kontrol edin.';
+
+  @override
+  String get haventYouReceievedAnEmail => 'E-posta almadınız mı?';
+
+  @override
+  String get passwordResetLinkHasBeenSentToYourEmail => 'Şifre sıfırlama bağlantısı e-postanıza gönderildi.';
+
+  @override
+  String get somethingWentWrong => 'Bir şeyler yanlış gitti.';
+
+  @override
+  String get enterYourEmailToSendYouAPasswordResetEmail => 'Şifre sıfırlama e-postası göndermek için e-posta adresinizi girin.';
+
+  @override
+  String get email2 => 'Email:';
+
+  @override
+  String get pleaseVerifyYourEmail => 'Lütfen e-postanızı doğrulayın';
 }

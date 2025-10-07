@@ -24,7 +24,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get language => 'Language';
 
   @override
-  String get system => 'system';
+  String get system => 'System';
 
   @override
   String get light => 'Light';
@@ -106,4 +106,25 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get navigate => 'Navigate';
+
+  @override
+  String get weHaveSentYouAnEmailForVerificationPleaseCheckYourEmail => 'We have sent you an e-mail for verification. Please Check your email.';
+
+  @override
+  String get haventYouReceievedAnEmail => 'Haven\'t you receieved an email?';
+
+  @override
+  String get passwordResetLinkHasBeenSentToYourEmail => 'Password reset link has been sent to your e-mail';
+
+  @override
+  String get somethingWentWrong => 'Something went wrong.';
+
+  @override
+  String get enterYourEmailToSendYouAPasswordResetEmail => 'Enter your e-mail to send you a password reset email';
+
+  @override
+  String get email2 => 'Email:';
+
+  @override
+  String get pleaseVerifyYourEmail => 'Please verify your email';
 }
