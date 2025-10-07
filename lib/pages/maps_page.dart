@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:bitespot/l10n/app_localizations.dart';
 import 'package:bitespot/providers/favorite_provider.dart';
 import 'package:bitespot/providers/location_provider.dart';
 import 'package:bitespot/utils/constants/size_constants.dart';
@@ -41,7 +44,7 @@ class _MapsPageState extends State<MapsPage> {
     } else if (status == LocationStatus.failure) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: const Text("Something went wrong."),
+          content: Text(AppLocalizations.of(context)!.somethingWentWrong),
           backgroundColor: Theme.of(context).colorScheme.error,
         ),
       );
@@ -53,7 +56,7 @@ class _MapsPageState extends State<MapsPage> {
     if (status == FavoriteStatus.failure) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: const Text("Something went wrong."),
+          content: Text(AppLocalizations.of(context)!.somethingWentWrong),
           backgroundColor: Theme.of(context).colorScheme.error,
         ),
       );
@@ -98,7 +101,11 @@ class _MapsPageState extends State<MapsPage> {
               floatingActionButton:
                   provider.status != LocationStatus.restaurantsLoaded
                   ? Padding(
-                      padding: const EdgeInsets.only(bottom: SizeConstants.s60),
+                      padding: Platform.isAndroid
+                          ? const EdgeInsetsGeometry.only(
+                              bottom: SizeConstants.s96,
+                            )
+                          : const EdgeInsets.only(bottom: SizeConstants.s60),
                       child: FloatingActionButton(
                         child: const Icon(Icons.search),
                         onPressed: () async {
@@ -112,7 +119,6 @@ class _MapsPageState extends State<MapsPage> {
                 children: [
                   GoogleMap(
                     markers: markers,
-                    polylines: polylines,
                     myLocationEnabled: true,
                     initialCameraPosition: CameraPosition(
                       target: LatLng(
@@ -164,7 +170,7 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
 
       builder: (context, scrollController) {
         return Navigator(
-          key: _innerNavigatorKey, // inner navigator key here
+          key: _innerNavigatorKey,
           onGenerateRoute: (settings) {
             return MaterialPageRoute(
               builder: (context) => Container(

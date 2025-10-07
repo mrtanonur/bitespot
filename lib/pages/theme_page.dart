@@ -1,4 +1,5 @@
 import 'package:bitespot/extensions/theme_extension.dart';
+import 'package:bitespot/l10n/app_localizations.dart';
 import 'package:bitespot/providers/main_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -18,7 +19,7 @@ class _ThemePageState extends State<ThemePage> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surfaceBright,
       appBar: AppBar(
-        title: const Text("Theme"),
+        title: Text(AppLocalizations.of(context)!.theme),
         backgroundColor: Theme.of(context).colorScheme.surfaceBright,
       ),
       body: Padding(

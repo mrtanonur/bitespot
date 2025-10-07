@@ -53,7 +53,7 @@ class _SignInPageState extends State<SignInPage> {
     } else if (status == AuthStatus.unverifiedEmail) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: const Text("Please verify your email"),
+          content: Text(AppLocalizations.of(context)!.pleaseVerifyYourEmail),
           backgroundColor: Theme.of(context).colorScheme.error,
         ),
       );
@@ -95,9 +95,9 @@ class SignInForm extends StatefulWidget {
 class _SignInFormState extends State<SignInForm> {
   final GlobalKey<FormState> _globalKey = GlobalKey<FormState>();
 
-  final _emailController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
 
-  final _passwordController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
   bool isLoading = false;
   bool rememberMe = false;
 
@@ -114,8 +114,8 @@ class _SignInFormState extends State<SignInForm> {
 
   @override
   void dispose() {
-    _emailController.text;
-    _passwordController;
+    _emailController.dispose();
+    _passwordController.dispose();
     super.dispose();
   }
 
@@ -190,7 +190,7 @@ class _SignInFormState extends State<SignInForm> {
                   _emailController.text,
                   _passwordController.text,
                 );
-                if (MainLocalDataSource.read("remember_me") != null) {
+                if (MainLocalDataSource.read('remember_me') != null) {
                   if (MainLocalDataSource.read('remember_me')) {
                     MainLocalDataSource.add('email', _emailController.text);
                     MainLocalDataSource.add(

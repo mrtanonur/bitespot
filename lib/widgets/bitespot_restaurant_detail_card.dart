@@ -13,7 +13,7 @@ class BitespotRestaurantDetailCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     LocationProvider provider = context.read<LocationProvider>();
-    String? selectedResturantId = provider.selectedResturant;
+    String? selectedResturantId = provider.selectedResturantId;
     RestaurantModel restaurant = provider.restaurants.firstWhere(
       (resturant) => resturant.id == selectedResturantId,
     );

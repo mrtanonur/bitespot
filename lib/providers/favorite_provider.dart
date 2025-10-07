@@ -31,10 +31,11 @@ class FavoriteProvider extends ChangeNotifier {
     if (favoriteRestaurants.any(
       (restaurant) => restaurant?.id == restaurantModel.id,
     )) {
+      //removing from UI list
       favoriteRestaurants.removeWhere((item) => item?.id == restaurantModel.id);
-
+      //removing from local storage
       await FavoriteLocalDataSource.delete(restaurantModel.id);
-
+      //removing from firestore
       await _firestoreService.removeFavorite(restaurantModel.id);
     } else {
       favoriteRestaurants.add(restaurantModel);

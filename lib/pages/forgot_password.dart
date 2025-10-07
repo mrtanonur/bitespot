@@ -35,8 +35,10 @@ class _ForgotPasswordState extends State<ForgotPassword> {
     if (status == AuthStatus.resetPassword) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: const Text(
-            "Password reset link has been sent to your e-mail",
+          content: Text(
+            AppLocalizations.of(
+              context,
+            )!.passwordResetLinkHasBeenSentToYourEmail,
           ),
           backgroundColor: Theme.of(context).colorScheme.outline,
         ),
@@ -44,7 +46,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
     } else if (status == AuthStatus.failure) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: const Text("Something went wrong."),
+          content: Text(AppLocalizations.of(context)!.somethingWentWrong),
           backgroundColor: Theme.of(context).colorScheme.error,
         ),
       );
@@ -67,7 +69,11 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             width: SizeConstants.s150,
           ),
           const SizedBox(height: SizeConstants.s24),
-          const Text("Enter your e-mail to send you a password reset email"),
+          Text(
+            AppLocalizations.of(
+              context,
+            )!.enterYourEmailToSendYouAPasswordResetEmail,
+          ),
           const SizedBox(height: SizeConstants.s24),
           const ForgotPasswordForm(),
         ],

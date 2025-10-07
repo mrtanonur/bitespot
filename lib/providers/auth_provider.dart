@@ -10,7 +10,7 @@ enum AuthStatus {
   unverifiedEmail,
   accountCreated,
   loggedIn,
-  logout,
+  signOut,
   resetPassword,
   failure,
 }
@@ -50,7 +50,7 @@ class AuthProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  // send verification email link if it hasnt been send to user
+  // send verification email link if it hasn't been send to user
   Future sendEmailVerificationLink() async {
     final response = await _authService.sendEmailVerificationLink();
     response.fold(
@@ -75,6 +75,7 @@ class AuthProvider extends ChangeNotifier {
     }, (_) {});
   }
 
+  //get user data once signed in
   Future getUserData() async {
     final response = await _firestoreService.getUserData();
     response.fold(
@@ -166,7 +167,7 @@ class AuthProvider extends ChangeNotifier {
         status = AuthStatus.failure;
       },
       (_) {
-        status = AuthStatus.logout;
+        status = AuthStatus.signOut;
       },
     );
     notifyListeners();

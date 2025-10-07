@@ -19,7 +19,7 @@ class ProfilePage extends StatelessWidget {
             const Icon(Icons.person, size: SizeConstants.s100),
             const SizedBox(height: SizeConstants.s48),
             profileInformation(
-              "Email:",
+              AppLocalizations.of(context)!.email2,
               context.read<AuthProvider>().userData!.email,
             ),
           ],

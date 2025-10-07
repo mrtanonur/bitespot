@@ -18,8 +18,10 @@ class EmailVerificationPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                "We have sent you an e-mail for verification. Please Check your email.",
+              Text(
+                AppLocalizations.of(
+                  context,
+                )!.weHaveSentYouAnEmailForVerificationPleaseCheckYourEmail,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: SizeConstants.s20),
@@ -28,7 +30,7 @@ class EmailVerificationPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Haven't you receieved an email?",
+                    AppLocalizations.of(context)!.haventYouReceievedAnEmail,
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.secondary,
                     ),

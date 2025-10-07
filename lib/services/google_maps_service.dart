@@ -41,7 +41,7 @@ class GoogleMapsService {
       List<RestaurantModel> restaurantList = data
           .map((restaurant) => RestaurantModel.fromJson(restaurant))
           .toList();
-      return (Right(restaurantList));
+      return Right(restaurantList);
     } catch (exception) {
       return Left(exception);
     }

@@ -20,10 +20,10 @@ class LocationProvider extends ChangeNotifier {
   Position? position;
   LocationStatus status = LocationStatus.initial;
   List<LatLng> points = [];
-  String? selectedResturant;
+  String? selectedResturantId;
 
   void setSelectedResturant(String id) {
-    selectedResturant = id;
+    selectedResturantId = id;
   }
 
   Future requestPermissionAccess() async {
@@ -31,9 +31,12 @@ class LocationProvider extends ChangeNotifier {
     final permission = await Geolocator.checkPermission();
     if (permission != LocationPermission.always ||
         permission != LocationPermission.whileInUse) {
-      await Geolocator.requestPermission();
+      final permissionResult = await Geolocator.requestPermission();
+      if (permissionResult == LocationPermission.whileInUse ||
+          permissionResult == LocationPermission.always) {
+        status = LocationStatus.locationPermissionAllowed;
+      }
     }
-    status = LocationStatus.locationPermissionAllowed;
     notifyListeners();
   }
 
