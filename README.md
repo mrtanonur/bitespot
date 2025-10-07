@@ -119,7 +119,30 @@ git clone https://github.com/mrtanonur/bitespot.git
 
 cd bitespot
 
-Install dependencies
+
+lib/
+
+├── features/
+
+│   ├── auth/           # Authentication logic
+
+│   ├── favorites/      # Favorites management
+
+│   ├── maps/          # Map and location features
+
+│   └── settings/      # User settings
+
+├── models/            # Data models
+
+├── providers/         # State management
+
+├── services/          # API and Firebase services
+
+├── widgets/           # Reusable UI components
+
+├── l10n/             # Localization files
+
+└── main.dart         # App entry point
 
 flutter pub get
 
