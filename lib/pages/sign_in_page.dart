@@ -39,9 +39,10 @@ class _SignInPageState extends State<SignInPage> {
     AuthStatus status = _provider!.status;
     if (status == AuthStatus.loggedIn) {
       _provider!.getUserData();
-      Navigator.pushReplacement(
+      Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(builder: (context) => const HomePage()),
+        (route) => false,
       );
     } else if (status == AuthStatus.failure) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -252,9 +253,10 @@ class _AuthSingInState extends State<AuthSingIn> {
               height: 54,
               onTap: () async {
                 await context.read<AuthProvider>().googleSignIn();
-                Navigator.pushReplacement(
+                Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(builder: (context) => const HomePage()),
+                  (route) => false,
                 );
               },
             ),
@@ -275,9 +277,10 @@ class _AuthSingInState extends State<AuthSingIn> {
             Text(AppLocalizations.of(context)!.notAMember),
             TextButton(
               onPressed: () {
-                Navigator.pushReplacement(
+                Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(builder: (context) => const SignUpPage()),
+                  (route) => false,
                 );
               },
               child: Text(AppLocalizations.of(context)!.signUpNow),

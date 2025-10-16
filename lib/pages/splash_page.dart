@@ -24,14 +24,16 @@ class _SplashPageState extends State<SplashPage> {
     _timer = Timer(const Duration(seconds: 2), () async {
       if (await authCheck()) {
         provider.getUserData();
-        Navigator.pushReplacement(
+        Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(builder: (context) => const HomePage()),
+          (route) => false,
         );
       } else {
-        Navigator.pushReplacement(
+        Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(builder: (context) => const SignUpPage()),
+          (route) => false,
         );
       }
     });

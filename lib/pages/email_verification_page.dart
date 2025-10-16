@@ -54,9 +54,10 @@ class EmailVerificationPage extends StatelessWidget {
               const SizedBox(height: SizeConstants.s20),
               BitespotButton(
                 onTap: () {
-                  Navigator.pushReplacement(
+                  Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(builder: (context) => const SignInPage()),
+                    (route) => false,
                   );
                 },
                 text: AppLocalizations.of(context)!.signIn,
